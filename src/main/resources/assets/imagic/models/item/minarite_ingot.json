@@ -1,0 +1,6 @@
+{
+  "parent": "imagic:item/standard_item",
+  "textures": {
+    "layer0": "imagic:items/minarite_ingot"
+  }
+}

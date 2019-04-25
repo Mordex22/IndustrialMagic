@@ -1,0 +1,12 @@
+###################
+# Industrial Magic
+###################
+
+# Items
+item.minariteIngot.name=Minarite Ingot
+
+# Ore Block
+tile.OreBlock.MinariteOre.name=Minarite Ore
+
+# Basic Block
+tile.BasicBlock.MinariteBlock.name=Minarite Block

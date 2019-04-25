@@ -1,0 +1,12 @@
+{
+  "defaults": {
+    "model": "imagic:basic_cube",
+    "textures": {
+      "all": "imagic:blocks/minarite_block"
+    }
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}

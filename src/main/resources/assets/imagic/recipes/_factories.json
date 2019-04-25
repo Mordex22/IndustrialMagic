@@ -1,0 +1,6 @@
+{
+  "recipes": {
+    "ore_shaped": "imagic.common.recipe.ShapedIndustrialMagicRecipe$RecipeFactory",
+    "ore_shapeless": "imagic.common.recipe.ShapelessIndustrialMagicRecipe$RecipeFactory"
+  }
+}

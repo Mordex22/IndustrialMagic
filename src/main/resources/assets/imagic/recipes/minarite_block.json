@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "imagic:basicblock",
+    "data": 0
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "type": "imagic:ore_shaped",
+  "key": {
+    "X": {
+      "item": "imagic:ingot",
+      "data": 0
+    }
+  }
+}

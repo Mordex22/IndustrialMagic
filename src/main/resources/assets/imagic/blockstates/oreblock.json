@@ -1,0 +1,11 @@
+{
+  "defaults": {
+    "model": "imagic:basic_cube"
+  },
+  "variants": {
+    "type": {
+      "minarite": {"textures": {"all": "imagic:blocks/minarite_ore"}}
+    },
+    "inventory": [{}]
+  }
+}
