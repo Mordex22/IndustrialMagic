@@ -19,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,6 +63,11 @@ public class IndustrialMagic {
         proxy.registerItemRenders();
     }
 
+    // Adds all in-game recipes
+    public static void addRecipes() {
+        GameRegistry.addSmelting(new ItemStack(IndustrialMagicBlocks.OreBlock, 1, 0), new ItemStack(IndustrialMagicItems.Ingot, 1, 0), 1.0F);
+    }
+
     // Registers specified items with the Ore Dictionary
     public static void registerOreDict() {
 
@@ -78,6 +84,7 @@ public class IndustrialMagic {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
+        addRecipes();
         proxy.init();
         logger.info("Mod loaded.");
     }
