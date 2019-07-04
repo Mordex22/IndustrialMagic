@@ -3,6 +3,7 @@ package imagic.common.blocks;
 import imagic.IndustrialMagic;
 import imagic.common.blocks.states.BlockStateOre;
 import imagic.common.blocks.states.BlockStateOre.EnumOreType;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;

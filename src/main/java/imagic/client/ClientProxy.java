@@ -3,9 +3,8 @@ package imagic.client;
 import imagic.common.CommonProxy;
 import imagic.common.IndustrialMagicBlocks;
 import imagic.common.IndustrialMagicItems;
-import imagic.common.blocks.states.BlockStateBasic;
+import imagic.common.blocks.states.BlockStateBasic.BasicBlockStateMapper;
 import imagic.common.blocks.states.BlockStateBasic.BasicBlockType;
-import imagic.common.blocks.states.BlockStateOre;
 import imagic.common.blocks.states.BlockStateOre.EnumOreType;
 
 import net.minecraft.client.renderer.ItemMeshDefinition;
@@ -25,7 +24,7 @@ import java.util.Map;
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 
-    private static final IStateMapper basicMapper = new BlockStateBasic.BasicBlockStateMapper();
+    private static final IStateMapper basicMapper = new BasicBlockStateMapper();
 
     public static Map<String, ModelResourceLocation> basicResources = new HashMap<>();
 
@@ -34,7 +33,7 @@ public class ClientProxy extends CommonProxy {
     public void registerBlockRenders() {
         ModelLoader.setCustomStateMapper(IndustrialMagicBlocks.BasicBlock, basicMapper);
 
-        for (BlockStateOre.EnumOreType ore : BlockStateOre.EnumOreType.values()) {
+        for (EnumOreType ore : EnumOreType.values()) {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IndustrialMagicBlocks.OreBlock), ore.ordinal(),
                     new ModelResourceLocation("imagic:OreBlock", "type=" + ore.getName()));
         }
