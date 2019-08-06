@@ -4,6 +4,7 @@ import imagic.common.CommonProxy;
 import imagic.common.IndustrialMagicBlocks;
 import imagic.common.IndustrialMagicItems;
 
+import imagic.common.world.GenHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
@@ -39,6 +40,8 @@ public class IndustrialMagic {
     public static Logger logger = LogManager.getLogger(MOD_NAME);
 
     public static CreativeTabIndustrialMagic tabIndustrialMagic = new CreativeTabIndustrialMagic();
+
+    public static GenHandler genHandler = new GenHandler();
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -83,6 +86,9 @@ public class IndustrialMagic {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        GameRegistry.registerWorldGenerator(genHandler, 1);
+
+
         MinecraftForge.EVENT_BUS.register(this);
         addRecipes();
         proxy.init();

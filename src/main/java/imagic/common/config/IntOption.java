@@ -1,0 +1,68 @@
+package imagic.common.config;
+
+import io.netty.buffer.ByteBuf;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.common.config.Property;
+
+import javax.annotation.Nullable;
+
+public class IntOption extends Option<IntOption> {
+
+    private final int defaultValue;
+    private int value;
+    private boolean hasRange = false;
+    private int min;
+    private int max;
+
+    IntOption(BaseConfig owner, String category, String key, int defaultValue, @Nullable String comment) {
+        super(owner, category, key, comment);
+        this.defaultValue = defaultValue;
+        this.value = defaultValue;
+    }
+
+    IntOption(BaseConfig owner, String category, String key, int defaultValue) {
+        this(owner, category, key, defaultValue, null);
+    }
+
+    IntOption(BaseConfig owner, String category, String key) {
+        this(owner, category, key, 0, null);
+    }
+
+    IntOption(BaseConfig owner, String category, String key, int defaultValue, @Nullable String comment, int min, int max) {
+        this(owner, category, key, defaultValue, comment);
+        this.hasRange = true;
+        this.min = min;
+        this.max = max;
+    }
+
+    public int val() {
+        return value;
+    }
+
+    @SuppressWarnings("Duplicates") // types are different
+    @Override
+    protected void load(Configuration config) {
+        Property prop;
+
+        if (hasRange) {
+            prop = config.get(this.category, this.key, this.defaultValue, this.comment, this.min, this.max);
+        } else {
+            prop = config.get(this.category, this.key, this.defaultValue, this.comment);
+        }
+
+        prop.setRequiresMcRestart(this.requiresGameRestart);
+        prop.setRequiresWorldRestart(this.requiresWorldRestart);
+
+        this.value = prop.getInt();
+    }
+
+    @Override
+    protected void write(ByteBuf buf) {
+        buf.writeInt(this.value);
+    }
+
+    @Override
+    protected void read(ByteBuf buf) {
+        this.value = buf.readInt();
+    }
+}
