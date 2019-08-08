@@ -3,7 +3,7 @@
   "defaults": {
     "model": "imagic:basic_cube",
     "textures": {
-      "all": "imagic:blocks/minarite_block"
+      "all": "imagic:blocks/block_minarite"
     }
   },
   "variants": {

@@ -1,0 +1,18 @@
+{
+  "result": {
+    "item": "imagic:ingot",
+    "data": 0
+  },
+  "pattern": [
+    "***",
+    "***",
+    "***"
+  ],
+  "type": "imagic:ore_shaped",
+  "key": {
+    "*": {
+      "item": "imagic:nugget",
+      "data": 0
+    }
+  }
+}

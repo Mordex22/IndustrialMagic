@@ -5,7 +5,7 @@
   },
   "variants": {
     "type": {
-      "minarite": {"textures": {"all": "imagic:blocks/minarite_ore"}}
+      "minarite": {"textures": {"all": "imagic:blocks/ore_minarite"}}
     },
     "inventory": [{}]
   }

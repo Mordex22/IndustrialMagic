@@ -101,6 +101,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerItemRenders() {
         registerItemRender(IndustrialMagicItems.Ingot);
+        registerItemRender(IndustrialMagicItems.Nugget);
     }
 
     public void registerItemRender(Item item) {

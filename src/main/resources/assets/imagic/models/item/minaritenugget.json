@@ -1,6 +1,6 @@
 {
   "parent": "imagic:item/standard_item",
   "textures": {
-    "layer0": "imagic:items/ingot_minarite"
+    "layer0": "imagic:items/nugget_minarite"
   }
 }

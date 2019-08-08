@@ -2,11 +2,17 @@
 # Industrial Magic
 ###################
 
-# Items
+# Ingots
 item.minariteIngot.name=Minarite Ingot
+
+# Nuggets
+item.minariteNugget.name=Minarite Nugget
 
 # Ore Block
 tile.OreBlock.MinariteOre.name=Minarite Ore
 
 # Basic Block
 tile.BasicBlock.MinariteBlock.name=Minarite Block
+
+# Creative Tab
+itemGroup.tabIndustrialMagic=Industrial Magic

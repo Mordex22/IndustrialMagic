@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "imagic:nugget",
+    "data": 0,
+    "count": 9
+  },
+  "pattern": [
+    "*"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "*": {
+      "item": "imagic:ingot",
+      "data": 0
+    }
+  }
+}
